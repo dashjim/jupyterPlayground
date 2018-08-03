@@ -8,7 +8,7 @@ generate picture. The first step is to generate a json file for the chart, then 
  file to  a svg chart.
  
  Now we have the svg chart to display in a browser and it should be able to reflect the data change,
- we can do it by start any http server in the folder containing the svg chart, then we can access it
+ we can do it by start any [http server](https://www.npmjs.com/package/http-server) in the folder containing the svg chart, then we can access it
  from browser.
  
  We will also use a chrome plugin to auto refresh the page. Search _auto refresh_ from Chrome app 
