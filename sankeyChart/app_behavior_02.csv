@@ -1,13 +1,13 @@
-source,intend,target,value
-余额,installment_campaign,hit,5
-余额,delay_payment,hit,3
-余额,billing_installment,hit,2
-余额,others,miss,2
-checking_bills,installment_campaign,hit,2
-checking_bills,delay_payment,hit,10
-checking_bills,billing_installment,hit,8
-checking_bills,others,miss,3
-invalid_password,reset_password_lookup,hit,10
-invalid_password,reset_password_trading,hit,2
-invalid_password,change_password_trading,hit,1
-invalid_password,others,miss,3
+source,intend,target,value, isLastHit
+余额,installment_campaign,hit,5, 0
+余额,delay_payment,hit,3, 0
+余额,billing_installment,hit,2, 0
+余额,others,miss,2, 9
+checking_bills,installment_campaign,hit,2, 0
+checking_bills,delay_payment,hit,10, 0
+checking_bills,billing_installment,hit,8, 0
+checking_bills,others,miss,3, 0
+invalid_password,reset_password_lookup,hit,10, 0
+invalid_password,reset_password_trading,hit,2, 0
+invalid_password,change_password_trading,hit,1, 0
+invalid_password,others,miss,3, 0
