@@ -10,8 +10,8 @@ from floweaver import *
 size = dict(width=570, height=300)
 
 nodes = {
-    'app_behavior': ProcessGroup(['余额', 'checking_bills', 'invalid_password']),
-    'evaluation': ProcessGroup(['hit', 'miss']),
+    'app_behavior': ProcessGroup(['查询余额', '查询账单', '密码错误']),
+    'evaluation': ProcessGroup(['命中', '未命中']),
 }
 ordering = [
     ['app_behavior'],
@@ -19,14 +19,14 @@ ordering = [
 ]
 
 app_behavior = Partition.Simple('process', [
-    '余额',
-    'checking_bills',
-    'invalid_password',
+    '查询余额',
+    '查询账单',
+    '密码错误',
 ])
 
 # This is another partition.
 evaluation = Partition.Simple('process', [
-    'hit', 'miss'
+    '命中', '未命中'
 ])
 
 # Update the ProcessGroup nodes to use the partitions
@@ -44,7 +44,7 @@ ordering = [
     ['evaluation'],
 ]
 
-intend = Partition.Simple('intend', ['installment_campaign', 'delay_payment','billing_installment','reset_password_lookup','reset_password_trading','change_password_trading','others'])
+intend = Partition.Simple('intend', ['了解分期活动', '延迟还款', '账单分期','重置查询密码','重置交易密码','更改交易密码','其它'])
 
 
 # 3. Update the bundle definition to send the flows via the waypoint
