@@ -2,3 +2,4 @@
 node_modules/
 .DS_Store
 .idea
+sankeyChart/ivr_rec_sankey.json sankeyChart/ivr_rec_sankey.svg

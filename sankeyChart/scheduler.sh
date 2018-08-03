@@ -1,4 +1,5 @@
 #!/bin/env bash
+PYTHONIOENCODING=UTF-8
 while [ true ]; do
  sleep 3
  # do what you need to here

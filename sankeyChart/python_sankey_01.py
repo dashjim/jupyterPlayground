@@ -1,8 +1,8 @@
+
 import time
 
 import pandas as pd
-flows = pd.read_csv('app_behavior_02.csv')
-flows
+flows = pd.read_csv('app_behavior_02.csv', encoding='utf-8')
 
 from floweaver import *
 
@@ -10,7 +10,7 @@ from floweaver import *
 size = dict(width=570, height=300)
 
 nodes = {
-    'app_behavior': ProcessGroup(['checking_balance', 'checking_bills', 'invalid_password']),
+    'app_behavior': ProcessGroup(['余额', 'checking_bills', 'invalid_password']),
     'evaluation': ProcessGroup(['hit', 'miss']),
 }
 ordering = [
@@ -19,7 +19,7 @@ ordering = [
 ]
 
 app_behavior = Partition.Simple('process', [
-    'checking_balance',
+    '余额',
     'checking_bills',
     'invalid_password',
 ])
