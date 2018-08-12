@@ -11,6 +11,7 @@ for line in f:
     if not need_remove:
         output.append(line)
 f.close()
-f = open(fn, 'w', encoding="utf-8")
+f = open(fn, 'w')
+# f = open(fn, 'w', encoding="utf-8")
 f.writelines(output)
 f.close()
