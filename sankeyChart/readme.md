@@ -42,6 +42,14 @@ generate picture. The first step is to generate a json file for the chart, then 
 1230     -->      修改交易密码
 1240     -->      其它
 ```
+
+**Team Viewer**
+
+
+382 345 370
+g e m     831
+
+
  
  
  

@@ -5,6 +5,8 @@ import pandas as pd
 
 db_connection = sql.connect(host='0.0.0.0', database='ivr_rec', user='root')
 df = pd.read_sql('select * from flow', con=db_connection)
+db_connection.commit()
+
 
 df = df.drop(labels='id', axis=1)
 
@@ -24,3 +26,5 @@ df['target']=df['target'].replace(is_hit_value, is_hit_meaning)
 df.rename(index=str, columns={"app_operation_end": "source", 'menu': 'intend'}, inplace=True)
 
 df.to_csv('app_behavior_02.csv', index=False)
+
+db_connection.close()
