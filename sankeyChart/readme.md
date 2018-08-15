@@ -49,6 +49,8 @@ generate picture. The first step is to generate a json file for the chart, then 
 382 345 370
 g e m     831
 
+**Mysql**
+root   /   123456      /     avaya_demo
 
  
  

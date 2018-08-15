@@ -1,5 +1,5 @@
 fn = 'ivr_rec_sankey.svg'
-f = open(fn, encoding="utf-8")
+f = open(fn)
 output = []
 need_remove = False
 # for ind, p in enumerate(p_list)
