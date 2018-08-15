@@ -16,3 +16,34 @@ generate picture. The first step is to generate a json file for the chart, then 
  
  Finally we need the _scheduler.sh_ to generate the json file and svg picture every 4 seconds. You
  can run it with _sh scheduler.sh_ 
+ 
+ 
+ **For mysql integration**
+ 
+ ```
+ create table flow(
+ id int(20) primary key not null auto_increment,
+ app_operation_end  varchar(50),
+ menu varchar(50),  
+ target varchar(20),
+ value int(200)
+ );
+ ```
+ 
+ Mapping from menu to Chinese meaning
+```
+0001     -->      欢迎词     
+1010     -->      延迟还款业务
+1020     -->      账单分期业务
+1030     -->      分期优惠活动
+1040     -->      其它
+1210     -->      查询密码重置
+1220     -->      交易密码重置
+1230     -->      修改交易密码
+1240     -->      其它
+```
+ 
+ 
+ 
+ 
+ 
