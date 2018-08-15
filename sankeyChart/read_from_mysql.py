@@ -3,7 +3,8 @@
 import mysql.connector as sql
 import pandas as pd
 
-db_connection = sql.connect(host='0.0.0.0', database='ivr_rec', user='root')
+# db_connection = sql.connect(host='0.0.0.0', database='ivr_rec', user='root')
+db_connection = sql.connect(host='0.0.0.0', database='avaya_demo', user='root', password='123456')
 df = pd.read_sql('select * from flow', con=db_connection)
 db_connection.commit()
 
