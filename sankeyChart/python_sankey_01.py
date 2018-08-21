@@ -61,4 +61,9 @@ nodes['intend'] = Waypoint(intend)
 print("going to produce")
 # weave(sdd, flows).to_widget(**size).auto_save_png("ivr_rec.png")
 # weave(sdd, flows).to_widget().auto_save_png('ivr_rec.png')
-weave(sdd, flows, measures={'isLastHit': 'sum'}, link_color=QuantitativeScale('isLastHit')).to_json('ivr_rec_sankey.json', format="widget")
+# weave(sdd, flows, measures={'isLastHit': 'sum'}, link_color=QuantitativeScale('isLastHit')).to_json('ivr_rec_sankey.json', format="widget")
+weave(sdd, flows,
+      palette='Set2_8',
+      link_color=CategoricalScale('isLastHit', palette='Set2_8'),
+      measures=['value', 'isLastHit'],
+      link_width='value').to_json('ivr_rec_sankey.json', format="widget")

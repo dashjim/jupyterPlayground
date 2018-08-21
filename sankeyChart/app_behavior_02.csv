@@ -1,4 +1,4 @@
-source,intend,target,value, isLastHit
+source,intend,target,value,isLastHit
 余额,installment_campaign,hit,5, 0
 余额,delay_payment,hit,3, 0
 余额,billing_installment,hit,2, 0
