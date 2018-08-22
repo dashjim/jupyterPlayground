@@ -43,7 +43,7 @@ ordering = [
     ['intend'],
     ['evaluation'],
 ]
-intend = Partition.Simple('intend', ['欢迎词', '延迟还款业务', '延迟还款', '账单分期业务', '账单分期', '分期优惠活动', '分期优惠活动_', '其它', '查询密码重置', '查询密码重置_', '交易密码重置', '交易密码重置_','修改交易密码', '修改交易密码_','其它'])
+intend = Partition.Simple('intend', ['欢迎词', '延迟还款业务', '延迟还款', '账单分期业务', '账单分期', '分期优惠活动', '分期优惠活动_', '查询密码重置', '查询密码重置_', '交易密码重置', '交易密码重置_','修改交易密码', '修改交易密码_','其它'])
 
 
 # 3. Update the bundle definition to send the flows via the waypoint
