@@ -10,8 +10,8 @@ from floweaver import *
 size = dict(width=570, height=300)
 
 nodes = {
-    'app_behavior': ProcessGroup(['查询余额', '查询账单', '密码错误']),
-    'evaluation': ProcessGroup(['命中', '未命中']),
+    'app_behavior': ProcessGroup(['查询余额', '查询账单', '密码错误'], title="来电前行为"),
+    'evaluation': ProcessGroup(['命中', '未命中'], title='推荐结果'),
 }
 ordering = [
     ['app_behavior'],
@@ -35,7 +35,7 @@ nodes['evaluation'].partition = evaluation
 
 
 # 1. Define a new waypoint node
-nodes['intend'] = Waypoint()
+nodes['intend'] = Waypoint(title='来电意图')
 
 # 2. Update the ordering to show where the waypoint goes: in the middle
 ordering = [
@@ -43,7 +43,7 @@ ordering = [
     ['intend'],
     ['evaluation'],
 ]
-intend = Partition.Simple('intend', ['欢迎词', '延迟还款业务', '延迟还款', '账单分期业务', '账单分期', '分期优惠活动', '分期优惠活动_', '查询密码重置', '查询密码重置_', '交易密码重置', '交易密码重置_','修改交易密码', '修改交易密码_','其它'])
+intend = Partition.Simple('intend', ['欢迎词', '延迟还款业务', '延迟还款', '账单分期业务', '账单分期', '分期优惠活动', '分期优惠活动_', '查询密码重置', '查询密码重置_', '交易密码重置', '交易密码重置_','修改交易密码', '修改交易密码_','新办信用卡', '理财业务咨询','其它'])
 
 
 # 3. Update the bundle definition to send the flows via the waypoint
@@ -55,7 +55,7 @@ bundles = [
 sdd = SankeyDefinition(nodes, bundles, ordering,
                        flow_partition=intend)
 
-nodes['intend'] = Waypoint(intend)
+nodes['intend'] = Waypoint(intend, title='来电意图')
 
 print("going to produce")
 # weave(sdd, flows).to_widget(**size).auto_save_png("ivr_rec.png")
